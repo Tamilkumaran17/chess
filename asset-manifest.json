@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "//github.com/Tamilkumaran17/chess/static/css/main.747a3afa.css",
-    "main.js": "//github.com/Tamilkumaran17/chess/static/js/main.69245229.js",
-    "index.html": "//github.com/Tamilkumaran17/chess/index.html",
-    "main.747a3afa.css.map": "//github.com/Tamilkumaran17/chess/static/css/main.747a3afa.css.map",
-    "main.69245229.js.map": "//github.com/Tamilkumaran17/chess/static/js/main.69245229.js.map"
+    "main.css": "/Tamilkumaran17/chess/static/css/main.747a3afa.css",
+    "main.js": "/Tamilkumaran17/chess/static/js/main.69245229.js",
+    "index.html": "/Tamilkumaran17/chess/index.html",
+    "main.747a3afa.css.map": "/Tamilkumaran17/chess/static/css/main.747a3afa.css.map",
+    "main.69245229.js.map": "/Tamilkumaran17/chess/static/js/main.69245229.js.map"
   },
   "entrypoints": [
     "static/css/main.747a3afa.css",
