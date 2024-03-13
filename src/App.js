@@ -5,12 +5,14 @@ import {Chess} from 'chess.js'
               
 
 function App() {
-  const [game, setGame] = useState(new Chess());
-  const [winner, setWinner] = useState(null);
-  const [username , setUsername] = useState('');
-  const [showChessboard, setShowChessboard] = useState(false);
+  const [game, setGame] = useState(new Chess());     
+  const [winner, setWinner] = useState(null);        
+  const [username , setUsername] = useState('');     
+  const [showChessboard, setShowChessboard] = useState(false);    
 
  
+
+
 function safeGameMutate(modify){
   setGame((g)=>{
     const update = {...g}
@@ -18,6 +20,8 @@ function safeGameMutate(modify){
     return update;
   })
 }
+
+
 
 function makeRandomMove(){
   const possibleMove = game.moves ();
@@ -87,7 +91,13 @@ const handleStartGame = () => {
                 position={game.fen()}
                 onPieceDrop={onDrop}
                 className="chessboard"
-              />
+                orientation="white" 
+                lightSquareStyle={{ backgroundColor: '#ffff' }} 
+                darkSquareStyle={{ backgroundColor: '#0000' }} 
+                dropSquareStyle={{ boxShadow: 'inset 0 0 1px 4px #63b88f' }} 
+                spareSquareStyle={{ backgroundColor: 'transparent' }} 
+                animationDuration={200} 
+                />
               {winner && (
                 <div className="winner">
                   {winner === 'Draw' ? (
