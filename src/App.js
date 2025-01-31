@@ -15,11 +15,17 @@ function App() {
 
 function safeGameMutate(modify){
   setGame((g)=>{
-    const update = {...g}
+    const update = {...g};
     modify(update)
     return update;
   })
 }
+
+const handleResetGame = () => {
+  setGame(new Chess());  // Resetting the game state
+  setWinner(null);       // Clear the winner state
+};
+
 
 
 
@@ -70,7 +76,7 @@ const handleStartGame = () => {
 
   return (
     <>
-     <center><h1 className='heading'>Welcome to the chess game</h1></center>
+     {/* <center><h1 className='heading' style={''}>Welcome to the chess game</h1></center> */}
     <div className="app">
         {!showChessboard && (
           
@@ -93,10 +99,11 @@ const handleStartGame = () => {
                 className="chessboard"
                 orientation="white" 
                 lightSquareStyle={{ backgroundColor: '#ffff' }} 
-                darkSquareStyle={{ backgroundColor: '#0000' }} 
+                darkSquareStyle={{ backgroundColor: '#000000' }} 
                 dropSquareStyle={{ boxShadow: 'inset 0 0 1px 4px #63b88f' }} 
                 spareSquareStyle={{ backgroundColor: 'transparent' }} 
                 animationDuration={200} 
+                boardWidth={Math.min(window.innerWidth * .9, 400)}
                 />
               {winner && (
                 <div className="winner">
@@ -108,6 +115,7 @@ const handleStartGame = () => {
                 </div>
               )}
             </div>
+            <button className="startbutton" onClick={handleResetGame}>Reset Game</button>
           </>
         )}
       </div>
