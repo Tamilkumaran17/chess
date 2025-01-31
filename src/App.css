@@ -135,7 +135,7 @@
 
   .heading {
     font-size: 20px;
-  }..board-container{
+  }.board-container{
     display: flex;
     overflow-x: auto;
     justify-content: center;
